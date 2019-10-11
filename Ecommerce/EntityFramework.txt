@@ -1,0 +1,22 @@
+﻿INSTRUÇÕE SOBRE O EF
+----console-------------------
+1 - instala o EF Core no projeto
+	Install-Package Microsoft.EntityFramework.SqlServer -Version:2.1.11
+
+2 - Criar as classes de modelo
+
+
+
+3 - Classe de contexto
+	-Herdar do DbContext
+	-Criar o Construtor
+	-Criar os DbSet de cada classe de modelo
+
+4 - Configurar o serviço do banco de dados na classe startup.cs
+
+5 - Criar a string de conexão no arquivo appsettings.json
+
+6 - Adiciona a migration
+	- Add-Migration NomeMigracao
+7 - Atualiza o banco
+	- Update-Database -verbose
