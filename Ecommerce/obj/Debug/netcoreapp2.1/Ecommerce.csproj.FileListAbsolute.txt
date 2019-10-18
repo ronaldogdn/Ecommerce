@@ -22,3 +22,5 @@ C:\Ronaldo\Ecommerce\Ecommerce\bin\Debug\netcoreapp2.1\Ecommerce.Views.pdb
 C:\Ronaldo\Ecommerce\Ecommerce\obj\Debug\netcoreapp2.1\Ecommerce.Views.pdb
 C:\Ronaldo\Ecommerce\Ecommerce\obj\Debug\netcoreapp2.1\Ecommerce.csproj.CopyComplete
 C:\Ronaldo\Ecommerce\Ecommerce\obj\Debug\netcoreapp2.1\Razor\Views\Produto\Cadastrar.g.cshtml.cs
+C:\Ronaldo\Ecommerce\Ecommerce\obj\Debug\netcoreapp2.1\Razor\Views\Produto\Index.g.cshtml.cs
+C:\Ronaldo\Ecommerce\Ecommerce\obj\Debug\netcoreapp2.1\Razor\Views\Produto\Alterar.g.cshtml.cs

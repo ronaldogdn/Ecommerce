@@ -37,7 +37,8 @@ namespace Ecommerce
             (
                 options =>options.UseSqlServer(Configuration.GetConnectionString("EcommerceConnection"))
             );
-            //configurando a injeção de dependência
+            //configurando a injeção de dependência*************
+            //ProdutoDAO é aonde estará a dependência
             services.AddScoped<ProdutoDAO>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
@@ -61,7 +62,7 @@ namespace Ecommerce
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Produto}/{action=Cadastrar}/{id?}");
+                    template: "{controller=Produto}/{action=Index}/{id?}");
             });
         }
     }

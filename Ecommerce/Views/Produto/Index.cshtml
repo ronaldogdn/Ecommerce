@@ -1,0 +1,55 @@
+﻿@{ 
+    //recebe da sacola
+    List<Produto> produtos = ViewBag.Produtos;
+    DateTime dataHora = ViewBag.DataHora;
+    
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h2>Gerenciamento de Produtos</h2>
+    <a asp-action="Cadastrar">Cadastrar Produto</a>
+    <br /><br />
+    <table width="600" border="1" bgcolor="#CCC">
+        <thead>
+            <tr>
+                <th width="101">Nome:</th>
+                <th width="150">Descrição</th>
+                <th width="150">Preço</th>
+                <th width="90">Quantidade</th>
+                <th width="150">Criado em</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Produto item in produtos)
+            {
+            <tr>
+                <td>@item.Nome</td>
+                <td>@item.Descricao</td>
+                <td>@item.Preco.ToString("C2")</td>
+                <td>@item.Quantidade</td>
+                <td>@item.CriadoEm</td>
+                <td>
+                    <a asp-action="Remover" asp-route-id="@item.ProdutoId">Remover</a>
+                </td>
+                <td>
+                    <a asp-action="Alterar" asp-route-id="@item.ProdutoId">Alterar</a>
+                </td>
+            </tr>
+            }
+
+        </tbody>
+    </table>
+    <p>
+        <b>Dados atualizados em: </b>@dataHora
+
+    </p>
+</body>
+</html>
