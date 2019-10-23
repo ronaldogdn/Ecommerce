@@ -24,3 +24,4 @@ C:\Ronaldo\Ecommerce\Ecommerce\obj\Debug\netcoreapp2.1\Ecommerce.csproj.CopyComp
 C:\Ronaldo\Ecommerce\Ecommerce\obj\Debug\netcoreapp2.1\Razor\Views\Produto\Cadastrar.g.cshtml.cs
 C:\Ronaldo\Ecommerce\Ecommerce\obj\Debug\netcoreapp2.1\Razor\Views\Produto\Index.g.cshtml.cs
 C:\Ronaldo\Ecommerce\Ecommerce\obj\Debug\netcoreapp2.1\Razor\Views\Produto\Alterar.g.cshtml.cs
+C:\Ronaldo\Ecommerce\Ecommerce\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs

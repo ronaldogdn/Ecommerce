@@ -1,29 +1,32 @@
-﻿
-@{
+﻿@{
+     Layout = "~/Views/Shared/_Layout.cshtml";
     Produto produto = ViewBag.Produto;
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Alterar</title>
-</head>
-<body>
-    <form asp-action="Alterar" method="post">
-        <input type="hidden" value="@produto.ProdutoId" name="hdnID" />
-        <label>Id:</label>
-        <input type="text" name="txtId" value="@produto.ProdutoId" readonly="" /><br />
-        <label>Nome:</label>
-        <input type="text" name="txtNome" value="@produto.Nome" /><br />
-        <label>Descrição:</label>
-        <input type="text" name="txtDescricao" value="@produto.Descricao" /><br />
-        <label>Preço:</label>
-        <input type="text" name="txtPreco" value="@produto.Preco" /><br />
-        <label>Quantidade:</label>
-        <input type="text" name="txtQuantidade" value="@produto.Quantidade" /><br />
-        <input type="submit" value="Salvar" />
-    </form>
-</body>
-</html>
+    <div class="container ">
+        <form asp-action="Alterar" method="post">
+            <div class="form-group">
+                <input type="hidden" value="@produto.ProdutoId" name="hdnID" id="hdnID" />
+            </div>
+            <div class="form-group">
+                <label for="Id">Id:</label>
+                <input type="text" class="form-control" name="txtId" id="id" value="@produto.ProdutoId" readonly="" />
+            </div>
+            <div class="form-group">
+                <label >Nome:</label>
+                <input type="text" class="form-control" required name="txtNome" id="nome" value="@produto.Nome" />
+            </div>
+            <div class="form-group">
+                <label>Descrição:</label>
+                <input type="text" class="form-control" required name="txtDescricao" id="descricao" value="@produto.Descricao" />
+            </div>
+            <div class="form-group">
+                <label>Preço:</label>
+                <input type="text" class="form-control" required name="txtPreco" id="preco" value="@produto.Preco" />
+            </div>
+            <div class="form-group">
+                <label>Quantidade:</label>
+                <input type="text" class="form-control" required name="txtQuantidade" id="quantidade" value="@produto.Quantidade" />
+            </div>
+            <input type="submit" class="btn btn-primary" value="Salvar" />
+        </form>
+    </div>
