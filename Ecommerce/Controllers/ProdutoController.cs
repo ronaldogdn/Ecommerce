@@ -22,10 +22,10 @@ namespace Ecommerce.Controllers
         public IActionResult Index()
         {
             //sacola que aceitar qualquer coisa
-            ViewBag.Produtos = _produtoDAO.Listar();
+            //ViewBag.Produtos = _produtoDAO.Listar(); @model foi colocado
             ViewBag.DataHora = DateTime.Now;
             //abre a view
-            return View();
+            return View(_produtoDAO.Listar());
         }
         //actiona para cadastrar
         public IActionResult Cadastrar()
@@ -34,15 +34,9 @@ namespace Ecommerce.Controllers
         }
         //só é acessado via post
         [HttpPost]
-        public IActionResult Cadastrar(string txtNome, string txtDescricao, string txtPreco, string txtQuantidade)
+        public IActionResult Cadastrar(Produto p)
         {
-            Produto p = new Produto
-            {
-                Nome = txtNome,
-                Descricao = txtDescricao,
-                Preco = Convert.ToDouble(txtPreco),
-                Quantidade = Convert.ToInt32(txtQuantidade)
-            };
+            //o objeto p chega preenchido do @model
 
             _produtoDAO.CadastrarProduto(p);
             //return View();
@@ -66,24 +60,16 @@ namespace Ecommerce.Controllers
 
         public IActionResult Alterar(int? id)
         {
+            //preenche o produto ao carregar a pag
             if(id != null)
             {
-                ViewBag.Produto = _produtoDAO.ListarProdutoPorId(id);
-                return View();
+                return View(_produtoDAO.ListarProdutoPorId(id));
             }
             return RedirectToAction("Index");
         }
         [HttpPost]
-        public IActionResult Alterar(string txtNome,string txtDescricao,string txtPreco,string txtQuantidade,
-                                     string txtID, string hdnID)
+        public IActionResult Alterar(Produto p)
         {
-            Produto p = _produtoDAO.ListarProdutoPorId(Convert.ToInt32(hdnID));
-
-            p.Nome = txtNome;
-            p.Descricao = txtDescricao;
-            p.Preco = Convert.ToDouble(txtPreco);
-            p.Quantidade = Convert.ToInt32(txtQuantidade);
-
             _produtoDAO.Alterar(p);
             return RedirectToAction("Index");
         }

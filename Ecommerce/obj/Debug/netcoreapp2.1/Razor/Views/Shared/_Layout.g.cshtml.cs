@@ -60,12 +60,12 @@ using Ecommerce.Models;
             WriteLiteral("<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(27, 171, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fb5ac88fda474c3687113813d378d3c4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4ab2058d35c94966809011165316f328", async() => {
                 BeginContext(33, 65, true);
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    ");
                 EndContext();
                 BeginContext(98, 56, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "52c2414d1f6c41db83f171a9f2319087", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "d22f69a0bcbe43e0b251bc7800e64a2e", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -109,7 +109,7 @@ using Ecommerce.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(200, 1547, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fd57462e6c454d80b5b61b8151c0fd32", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "609a38b85c4e4614a9063d656f8d81dc", async() => {
                 BeginContext(206, 2, true);
                 WriteLiteral("\r\n");
                 EndContext();
@@ -135,7 +135,7 @@ using Ecommerce.Models;
             ");
                 EndContext();
                 BeginContext(1194, 241, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "80e87bfa81ec48f89653008a2a6ae112", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "be8fd63798824823b6837227954d65b0", async() => {
                     BeginContext(1233, 195, true);
                     WriteLiteral("\r\n                <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\">\r\n                <button class=\"btn btn-secondary my-2 my-sm-0\" type=\"submit\">Search</button>\r\n            ");
                     EndContext();

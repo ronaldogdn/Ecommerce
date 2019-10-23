@@ -1,23 +1,26 @@
-﻿
+﻿@*tipagem
+    asp-for="" troca o name do Html    
+*@
+@model Produto
 <div class="container ">
     <form asp-action="Cadastrar" method="post">
         <fieldset>
             <legend>Cadastrar produto</legend>
             <div class="form-group">
                 <label>Nome:</label>
-                <input type="text" class="form-control" required name="txtNome" id="nome" />
+                <input type="text" class="form-control" required asp-for="Nome" id="nome" />
             </div>
             <div class="form-group">
                 <label>Descrição:</label>
-                <input type="text" class="form-control" required name="txtDescricao" id="descricao" />
+                <input type="text" class="form-control" required asp-for="Descricao" id="descricao" />
             </div>
             <div class="form-group">
                 <label>Preço:</label>
-                <input type="text" class="form-control" required name="txtPreco" id="preco" />
+                <input type="text" class="form-control" required asp-for="Preco" id="preco" />
             </div>
             <div class="form-group">
                 <label>Quantidade:</label>
-                <input type="text" class="form-control" required name="txtQuantidade" id="quantidade" />
+                <input type="text" class="form-control" required asp-for="Quantidade" id="quantidade" />
             </div>
             <input type="submit" class="btn btn-primary" value="Cadastrar" />
 

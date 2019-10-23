@@ -1,6 +1,8 @@
-﻿@{
-    //recebe da sacola
-    List<Produto> produtos = ViewBag.Produtos;
+﻿@* Rece a lista de produtos *@
+@model List<Produto>
+@{
+    //recebe da sacola com o @model não é necessário
+    //List<Produto> produtos = ViewBag.Produtos;
     DateTime dataHora = ViewBag.DataHora;
 
 }
@@ -21,7 +23,8 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (Produto item in produtos)
+        @* Model recebe a informação da lista *@
+        @foreach (Produto item in Model)
         {
             <tr>
                 <td>@item.Nome</td>
