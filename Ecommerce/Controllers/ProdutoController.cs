@@ -36,12 +36,22 @@ namespace Ecommerce.Controllers
         [HttpPost]
         public IActionResult Cadastrar(Produto p)
         {
-            //o objeto p chega preenchido do @model
-
-            _produtoDAO.CadastrarProduto(p);
-            //return View();
-            //redirecionamento
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                //o objeto p chega preenchido do @model
+                if (_produtoDAO.CadastrarProduto(p))
+                {
+                    //redirecionamento
+                    return RedirectToAction("Index");
+                }
+                //mandar mensagens para o usuário
+                ModelState.AddModelError("", "Esse produto já existe");
+                /*o parâmetro é opcional;
+                 * return View para preencher o formulário e não perder os dados
+                já cadastrados nesse formulário*/
+                return View(p);
+            }
+            return View(p);
         }
         //o ? pode receber parâmetro nulo
         public IActionResult Remover(int? id)

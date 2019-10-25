@@ -6,26 +6,30 @@
     <form asp-action="Cadastrar" method="post">
         <fieldset>
             <legend>Cadastrar produto</legend>
+            @* Mostra a mensagem de erro para o usuário *@
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label>Nome:</label>
-                <input type="text" class="form-control" required asp-for="Nome" id="nome" />
+                <label asp-for="Nome"></label>
+                <input type="text" class="form-control"  asp-for="Nome" id="nome" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label>Descrição:</label>
-                <input type="text" class="form-control" required asp-for="Descricao" id="descricao" />
+                <label asp-for="Descricao"></label>
+                <input type="text" class="form-control"  asp-for="Descricao" id="descricao" />
+                <span asp-validation-for="Descricao" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label>Preço:</label>
-                <input type="text" class="form-control" required asp-for="Preco" id="preco" />
+                <label asp-for="Preco"></label>
+                <input type="text" class="form-control"  asp-for="Preco" id="preco" />
+                <span asp-validation-for="Preco" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label>Quantidade:</label>
-                <input type="text" class="form-control" required asp-for="Quantidade" id="quantidade" />
+                <label asp-for="Quantidade"></label>
+                <input type="text" class="form-control"  asp-for="Quantidade" id="quantidade" />
+                <span asp-validation-for="Quantidade" class="text-danger"></span>
             </div>
             <input type="submit" class="btn btn-primary" value="Cadastrar" />
 
         </fieldset>
     </form>
-
-
 </div>
