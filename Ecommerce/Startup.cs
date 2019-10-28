@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Ecommerce.DAL;
+﻿using Ecommerce.DAL;
 using Ecommerce.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -32,12 +28,15 @@ namespace Ecommerce
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-
+            /**
+             *Nome da conexão 
+             */
             services.AddDbContext<Context>
             (
                 options =>options.UseSqlServer(Configuration.GetConnectionString("EcommerceConnection"))
             );
-            //configurando a injeção de dependência*************
+
+            //configurando a injeção de dependência
             //ProdutoDAO é aonde estará a dependência
             services.AddScoped<ProdutoDAO>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
@@ -57,7 +56,7 @@ namespace Ecommerce
 
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
+            //página inicial
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

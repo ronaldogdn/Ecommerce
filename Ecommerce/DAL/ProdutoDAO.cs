@@ -1,13 +1,12 @@
 ﻿using Ecommerce.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Ecommerce.DAL
 {
     public class ProdutoDAO
     {
+        //var somente leitura
         private readonly Context _context;
         public ProdutoDAO(Context context)
         {
@@ -39,6 +38,7 @@ namespace Ecommerce.DAL
         {
             return _context.Produtos.Find(id);            
         }
+        //id pode vir nulo
         public bool RemoverProdutoPorId(int? id)
         {
             try
