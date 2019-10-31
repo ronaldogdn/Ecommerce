@@ -19,12 +19,12 @@ using Ecommerce;
 #line default
 #line hidden
 #line 2 "C:\Users\ronal\Source\Repos\Ecommerce\Ecommerce\Views\_ViewImports.cshtml"
-using Ecommerce.Models;
+using Domain;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"35dd46886eda3d7e295c5a25da1471981250ec08", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6bbcd7c65731fc074a835809e73fcf2cf9014c29", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"370b33f587ad063fe86f9aa348ad99eaf4d9b1d4", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

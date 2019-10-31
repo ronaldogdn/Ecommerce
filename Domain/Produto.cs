@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Ecommerce.Models
+namespace Domain
 {
     /*Annotations ASP.NET Core*/
     //nome da tabela

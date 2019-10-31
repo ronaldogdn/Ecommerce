@@ -1,10 +1,10 @@
-﻿using Ecommerce.Models;
+﻿using Domain;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Ecommerce.DAL
+namespace Repository
 {
-    public class ProdutoDAO
+    public class ProdutoDAO : IRepository<Produto>
     {
         //var somente leitura
         private readonly Context _context;
@@ -13,7 +13,7 @@ namespace Ecommerce.DAL
             //depende do contexto para funcionar
             _context = context;            
         }
-        public bool CadastrarProduto(Produto p)
+        public bool Cadastrar(Produto p)
         {
             //faz a validação antes de salvar
             if (BuscarProdutoPorNome(p) == null)
@@ -29,33 +29,30 @@ namespace Ecommerce.DAL
         {
             return _context.Produtos.FirstOrDefault(x => x.Nome.Equals(p.Nome));            
         }
-        public List<Produto> Listar()
-        {
-            return _context.Produtos.ToList();
-        }
-
-        public Produto ListarProdutoPorId(int? id)
+        public Produto BuscarPorId(int? id)
         {
             return _context.Produtos.Find(id);            
         }
         //id pode vir nulo
-        public bool RemoverProdutoPorId(int? id)
+        public bool Remover(int? id)
         {
-            try
-            {
-                _context.Produtos.Remove(ListarProdutoPorId(id));
-                _context.SaveChanges();
-                return true;
-            }
-            catch
+            if(id == null)
             {
                 return false;
-            }            
+            }
+            _context.Produtos.Remove(BuscarPorId(id));
+            _context.SaveChanges();
+            return true;                       
         }
         public void Alterar(Produto p)
         {
             _context.Produtos.Update(p);
             _context.SaveChanges();
+        }
+
+        public List<Produto> ListarTodos()
+        {
+            return _context.Produtos.ToList();
         }
     }
 }

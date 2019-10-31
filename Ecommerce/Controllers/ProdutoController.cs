@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Ecommerce.DAL;
-using Ecommerce.Models;
+using Domain;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Repository;
 
 namespace Ecommerce.Controllers
 {
@@ -13,9 +14,11 @@ namespace Ecommerce.Controllers
         //var usada para acessar dentre todas as views
         //readonly só recebe no construtor ou na declaração; não pode dar new()
         private readonly ProdutoDAO _produtoDAO;
-        public ProdutoController(ProdutoDAO produtoDAO)
+        private readonly CategoriaDAO _categoriaDAO;
+        public ProdutoController(ProdutoDAO produtoDAO,CategoriaDAO categoriaDAO)
         {
-            _produtoDAO = produtoDAO;       
+            _produtoDAO = produtoDAO;
+            _categoriaDAO = categoriaDAO;
         }
         //actions -> no controller os métodos se chamam actions
         //1 ° action faz a abertura da view
@@ -25,21 +28,24 @@ namespace Ecommerce.Controllers
             //ViewBag.Produtos = _produtoDAO.Listar(); @model foi colocado
             ViewBag.DataHora = DateTime.Now;
             //abre a view
-            return View(_produtoDAO.Listar());
+            return View(_produtoDAO.ListarTodos());
         }
         //actiona para cadastrar
         public IActionResult Cadastrar()
         {
+            ViewBag.Categorias = new SelectList(_categoriaDAO.ListarTodos(), "CategoriaId",
+                "Nome");
             return View();
         }
         //só é acessado via post
         [HttpPost]
-        public IActionResult Cadastrar(Produto p)
+        public IActionResult Cadastrar(Produto p,int drpCategorias)
         {
+            ViewBag.Categorias = new SelectList(_categoriaDAO.ListarTodos(), "CategoriaId","Nome");
             if (ModelState.IsValid)
             {
                 //o objeto p chega preenchido do @model
-                if (_produtoDAO.CadastrarProduto(p))
+                if (_produtoDAO.Cadastrar(p))
                 {
                     //redirecionamento
                     return RedirectToAction("Index");
@@ -59,7 +65,7 @@ namespace Ecommerce.Controllers
             if (id != null)
             {
                 //remover o produto
-                if (_produtoDAO.RemoverProdutoPorId(id))
+                if (_produtoDAO.Remover(id))
                 {
                     return RedirectToAction("Index");
                 }                
@@ -73,7 +79,7 @@ namespace Ecommerce.Controllers
             //preenche o produto ao carregar a pag
             if(id != null)
             {
-                return View(_produtoDAO.ListarProdutoPorId(id));
+                return View(_produtoDAO.BuscarPorId(id));
             }
             return RedirectToAction("Index");
         }
