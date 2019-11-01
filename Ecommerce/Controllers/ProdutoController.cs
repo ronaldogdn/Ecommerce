@@ -33,8 +33,7 @@ namespace Ecommerce.Controllers
         //actiona para cadastrar
         public IActionResult Cadastrar()
         {
-            ViewBag.Categorias = new SelectList(_categoriaDAO.ListarTodos(), "CategoriaId",
-                "Nome");
+            ViewBag.Categorias = new SelectList(_categoriaDAO.ListarTodos(), "CategoriaId","Nome");
             return View();
         }
         //só é acessado via post

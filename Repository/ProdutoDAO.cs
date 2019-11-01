@@ -27,7 +27,7 @@ namespace Repository
         //verifica se existe um produto já cadastrado
         public Produto BuscarProdutoPorNome(Produto p)
         {
-            return _context.Produtos.FirstOrDefault(x => x.Nome.Equals(p.Nome));            
+            return _context.Produtos.FirstOrDefault(x => x.Nome == p.Nome);
         }
         public Produto BuscarPorId(int? id)
         {

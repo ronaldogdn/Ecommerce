@@ -31,7 +31,7 @@ namespace Repository
         }
         public Categoria BuscarPorNome(Categoria objeto)
         {
-            return _context.Categorias.FirstOrDefault(x => x.Nome.Equals(objeto.Nome));
+            return _context.Categorias.FirstOrDefault(x => x.Nome == objeto.Nome);
         }
 
         public List<Categoria> ListarTodos()

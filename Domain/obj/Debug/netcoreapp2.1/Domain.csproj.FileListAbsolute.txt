@@ -6,7 +6,6 @@ C:\Ronaldo\Ecommerce\Domain\obj\Debug\netcoreapp2.1\Domain.AssemblyInfoInputs.ca
 C:\Ronaldo\Ecommerce\Domain\obj\Debug\netcoreapp2.1\Domain.AssemblyInfo.cs
 C:\Ronaldo\Ecommerce\Domain\obj\Debug\netcoreapp2.1\Domain.dll
 C:\Ronaldo\Ecommerce\Domain\obj\Debug\netcoreapp2.1\Domain.pdb
-C:\Ronaldo\Ecommerce\Domain\obj\Debug\netcoreapp2.1\Domain.csprojAssemblyReference.cache
 C:\Users\ronal\Source\Repos\Ecommerce\Domain\bin\Debug\netcoreapp2.1\Domain.deps.json
 C:\Users\ronal\Source\Repos\Ecommerce\Domain\bin\Debug\netcoreapp2.1\Domain.dll
 C:\Users\ronal\Source\Repos\Ecommerce\Domain\bin\Debug\netcoreapp2.1\Domain.pdb
@@ -15,3 +14,4 @@ C:\Users\ronal\Source\Repos\Ecommerce\Domain\obj\Debug\netcoreapp2.1\Domain.Asse
 C:\Users\ronal\Source\Repos\Ecommerce\Domain\obj\Debug\netcoreapp2.1\Domain.AssemblyInfo.cs
 C:\Users\ronal\Source\Repos\Ecommerce\Domain\obj\Debug\netcoreapp2.1\Domain.dll
 C:\Users\ronal\Source\Repos\Ecommerce\Domain\obj\Debug\netcoreapp2.1\Domain.pdb
+C:\Ronaldo\Ecommerce\Domain\obj\Debug\netcoreapp2.1\Domain.csprojAssemblyReference.cache
