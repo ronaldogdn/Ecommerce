@@ -71,7 +71,7 @@ using Domain;
             WriteLiteral("\r\n<h2>Gerenciamento de Produtos</h2>\r\n");
             EndContext();
             BeginContext(250, 72, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7b85a65eb86e432c9b72834a51bbfe28", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "38aaae8caf014cf186dc07b7ecd58ba3", async() => {
                 BeginContext(301, 17, true);
                 WriteLiteral("Cadastrar Produto");
                 EndContext();
@@ -168,7 +168,7 @@ using Domain;
             WriteLiteral("</td>\r\n                <td>\r\n                    ");
             EndContext();
             BeginContext(1088, 89, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fd41bfd939ba40969c279afcb0efd40f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2eda20b8dc3645078468b1b884e67d18", async() => {
                 BeginContext(1166, 7, true);
                 WriteLiteral("Remover");
                 EndContext();
@@ -204,7 +204,7 @@ using Domain;
             WriteLiteral("\r\n                </td>\r\n                <td>\r\n                    ");
             EndContext();
             BeginContext(1244, 118, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a0373e0483fd41e98fd99ec581e97f18", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "79d0515195554c32b741f4d4bbb7ef45", async() => {
                 BeginContext(1351, 7, true);
                 WriteLiteral("Alterar");
                 EndContext();

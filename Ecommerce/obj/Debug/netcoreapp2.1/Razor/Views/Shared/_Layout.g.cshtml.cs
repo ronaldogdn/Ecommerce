@@ -60,12 +60,12 @@ using Domain;
             WriteLiteral("<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(27, 171, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4a83de917146476ba049794bc22a2877", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e34c4b47db164610bbf85990709df701", async() => {
                 BeginContext(33, 65, true);
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    ");
                 EndContext();
                 BeginContext(98, 56, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ebe2c40b98814ac69ecd40336195dd98", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "fb331396e9654b50996cbd035e8b7fe8", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -109,7 +109,7 @@ using Domain;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(200, 1547, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0cf2a5363f764f48ae5f674545821839", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4dcc213de79942ea98dbe3330867ed84", async() => {
                 BeginContext(206, 2, true);
                 WriteLiteral("\r\n");
                 EndContext();
@@ -135,7 +135,7 @@ using Domain;
             ");
                 EndContext();
                 BeginContext(1194, 241, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cc5973546d524d86be7c148df927615f", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ed61aa8bc69f42fa97efd2f990ec0a0d", async() => {
                     BeginContext(1233, 195, true);
                     WriteLiteral("\r\n                <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\">\r\n                <button class=\"btn btn-secondary my-2 my-sm-0\" type=\"submit\">Search</button>\r\n            ");
                     EndContext();

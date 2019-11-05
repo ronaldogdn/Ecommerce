@@ -8,7 +8,8 @@
                 <div asp-validation-summary="ModelOnly" class="text-primary"></div>
                 <div class="form-group">
                     <label asp-for="Endereco.Cep"></label>
-                    <input type="text" class="form-control" asp-for="Endereco.Cep" />
+                    <input type="text" class="form-control" asp-for="Endereco.Cep" required/>
+                    <span asp-validation-for="Endereco" class="text-danger"></span>
                 </div>
                 <input type="submit" class="btn btn-info" value="Buscar" asp-action="BuscarCep" asp-controller="Usuario" />
 
@@ -31,6 +32,25 @@
                     <label asp-for="Endereco.UF"></label>
                     <input type="text" class="form-control" asp-for="Endereco.UF" readonly="" />
                 </div>
+            </fieldset>
+            <fieldset>
+                <legend>Dados pessoais</legend>
+                <div class="form-group">
+                    <label asp-for="Email"></label>
+                    <input type="text" class="form-control" asp-for="Email" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Senha"></label>
+                    <input type="password" class="form-control" asp-for="Senha" />
+                    <span asp-validation-for="Senha" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ConfirmacaoSenha"></label>
+                    <input type="password" class="form-control" asp-for="ConfirmacaoSenha" />
+                    <span asp-validation-for="ConfirmacaoSenha" class="text-danger"></span>
+                </div>
+                <input type="submit" class="btn btn-success" value="Cadastrar" asp-action="Cadastrar" asp-controller="Usuario" />
             </fieldset>
         </form>
     </div>

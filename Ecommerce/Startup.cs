@@ -42,6 +42,7 @@ namespace Ecommerce
             //ProdutoDAO é aonde estará a dependência
             services.AddScoped<ProdutoDAO>();
             services.AddScoped<CategoriaDAO>();
+            services.AddScoped<UsuarioDAO>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
