@@ -36,7 +36,7 @@ namespace Ecommerce.Controllers
             string url = "https://viacep.com.br/ws/" + u.Endereco.Cep + "/json/";
             //
             WebClient client = new WebClient();
-            //armazena temporariamente recupera uma única vez
+            //armazena temporariamente; recupera uma única vez
             TempData["Endereco"] = client.DownloadString(url); ;
             //redireciona para a action; nameof garante que o nome está certo
             return RedirectToAction(nameof(Cadastrar));

@@ -24,6 +24,7 @@ namespace Ecommerce
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
+                //cookies de sessão
                 options.CheckConsentNeeded = context => false;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
@@ -59,7 +60,7 @@ namespace Ecommerce
             app.UseStaticFiles();
             app.UseCookiePolicy();
             app.UseSession();
-            //página inicial
+            //página inicial; Produto é a pasta e dentro tem o Index
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
