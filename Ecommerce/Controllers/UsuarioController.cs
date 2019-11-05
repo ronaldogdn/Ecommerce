@@ -20,14 +20,12 @@ namespace Ecommerce.Controllers
             Usuario u = new Usuario();
             if(TempData["Endereco"] != null)
             {
+                //pega o resultado do cookie do json na sessão
                 string resultado = TempData["Endereco"].ToString();
                 Endereco endereco = JsonConvert.DeserializeObject<Endereco>(resultado);
                 u.Endereco = endereco;
-            }            
-            //transforma no objeto
-            
-            //string resultado = client.DownloadString(url);
-            return View();
+            }
+            return View(u);
         }
         [HttpPost]
         public IActionResult BuscarCep(Usuario u)
@@ -37,7 +35,8 @@ namespace Ecommerce.Controllers
             //
             WebClient client = new WebClient();
             //armazena temporariamente; recupera uma única vez
-            TempData["Endereco"] = client.DownloadString(url); ;
+            //armazena o json do CEP
+            TempData["Endereco"] = client.DownloadString(url); 
             //redireciona para a action; nameof garante que o nome está certo
             return RedirectToAction(nameof(Cadastrar));
             //return RedirectToAction("Cadastrar");
