@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Ronaldo\\Ecommerce\\Repository\\Repository.csproj": {}
+    "C:\\Users\\ronal\\Source\\Repos\\Ecommerce\\Repository\\Repository.csproj": {}
   },
   "projects": {
-    "C:\\Ronaldo\\Ecommerce\\Domain\\Domain.csproj": {
+    "C:\\Users\\ronal\\Source\\Repos\\Ecommerce\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Ronaldo\\Ecommerce\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\ronal\\Source\\Repos\\Ecommerce\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Ronaldo\\Ecommerce\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-        "outputPath": "C:\\Ronaldo\\Ecommerce\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\ronal\\Source\\Repos\\Ecommerce\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\ronal\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ronal\\Source\\Repos\\Ecommerce\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ronal\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -51,28 +51,34 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Ronaldo\\Ecommerce\\Repository\\Repository.csproj": {
+    "C:\\Users\\ronal\\Source\\Repos\\Ecommerce\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Ronaldo\\Ecommerce\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\ronal\\Source\\Repos\\Ecommerce\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "C:\\Ronaldo\\Ecommerce\\Repository\\Repository.csproj",
-        "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-        "outputPath": "C:\\Ronaldo\\Ecommerce\\Repository\\obj\\",
+        "projectPath": "C:\\Users\\ronal\\Source\\Repos\\Ecommerce\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\ronal\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ronal\\Source\\Repos\\Ecommerce\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ronal\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -86,8 +92,8 @@
         "frameworks": {
           "netcoreapp2.1": {
             "projectReferences": {
-              "C:\\Ronaldo\\Ecommerce\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Ronaldo\\Ecommerce\\Domain\\Domain.csproj"
+              "C:\\Users\\ronal\\Source\\Repos\\Ecommerce\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\ronal\\Source\\Repos\\Ecommerce\\Domain\\Domain.csproj"
               }
             }
           }
@@ -119,10 +125,16 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

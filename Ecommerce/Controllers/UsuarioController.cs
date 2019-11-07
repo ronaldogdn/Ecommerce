@@ -33,27 +33,35 @@ namespace Ecommerce.Controllers
                 Endereco endereco = JsonConvert.DeserializeObject<Endereco>(resultado);
                 u.Endereco = endereco;
             }
+            if(TempData["Erro"] != null)
+            {
+                ModelState.AddModelError("", "Informe um CEP válido!");
+            }
             return View(u);
         }
         [HttpPost]
         public IActionResult BuscarCep(Usuario u)
         {
-            if (u.Endereco.Cep == null)
-            {
-                ModelState.AddModelError("", "Informe o CEP!");
-                return View();
-            }
-            //url do cep
-            string url = "https://viacep.com.br/ws/" + u.Endereco.Cep + "/json/";
-            //
-            WebClient client = new WebClient();
             
-            //armazena temporariamente; recupera uma única vez
-            //armazena o json do CEP
-            TempData["Endereco"] = client.DownloadString(url); 
-            //redireciona para a action; nameof garante que o nome está certo
-            return RedirectToAction(nameof(Cadastrar));
-            //return RedirectToAction("Cadastrar");
+            try
+            {
+                //url do cep
+                string url = "https://viacep.com.br/ws/" + u.Endereco.Cep + "/json/";
+                //
+                WebClient client = new WebClient();
+
+                //armazena temporariamente; recupera uma única vez
+                //armazena o json do CEP
+                TempData["Endereco"] = client.DownloadString(url);
+                //redireciona para a action; nameof garante que o nome está certo
+                return RedirectToAction(nameof(Cadastrar));
+                //return RedirectToAction("Cadastrar");
+            }
+            catch(WebException e)
+            {
+                TempData["Erro"] = e.Message;                
+            }
+            return RedirectToAction("Cadastrar");
         }
         [HttpPost]
         public IActionResult Cadastrar(Usuario u)
@@ -66,6 +74,11 @@ namespace Ecommerce.Controllers
                     return RedirectToAction("Index");
                 }
                 ModelState.AddModelError("", "Este e-mail já está cadastrado!");
+            }
+            else
+            {
+                //se existe algum campo vazio
+                ModelState.AddModelError("", "Preencha todos os campos!");
             }
             return View(u);
         }
