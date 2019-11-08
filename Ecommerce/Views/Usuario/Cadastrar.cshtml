@@ -9,7 +9,6 @@
                 <div class="form-group">
                     <label asp-for="Endereco.Cep"></label>
                     <input type="text" class="form-control" asp-for="Endereco.Cep" required/>
-                    <h3>@ViewData["Message"]</h3>
                 </div>
                 <input type="submit" class="btn btn-info" value="Buscar" asp-action="BuscarCep" asp-controller="Usuario" />
 

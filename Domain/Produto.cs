@@ -45,5 +45,7 @@ namespace Domain
         [Range(1,1000, ErrorMessage ="Os valore devem estar entre 1 e 1000!")]
         public int? Quantidade { get; set; }
         public DateTime CriadoEm { get; set; }
+        public Categoria Categoria { get; set; }
+        public string Imagem { get; set; }
     }
 }

@@ -1,11 +1,11 @@
 ﻿@model Produto
 
 <div class="container ">
-    <form asp-action="Alterar" method="post">
+    <form asp-action="Alterar" method="post" enctype="multipart/form-data">
         <fieldset>
             <legend>Alterar produto</legend>
             <div class="form-group">
-                <input type="hidden"  asp-for="ProdutoId" id="hdnID" />
+                <input type="hidden" asp-for="ProdutoId" id="hdnID" />
             </div>
             <div class="form-group">
                 <label for="Id">Id:</label>
@@ -26,6 +26,10 @@
             <div class="form-group">
                 <label>Quantidade:</label>
                 <input type="text" class="form-control" required asp-for="Quantidade" id="quantidade" />
+            </div>
+            <div class="form-group" id="Imagem">
+                <label>Imagem:</label><br />
+                <input type="file" name="fupImagem"  />
             </div>
             <input type="submit" class="btn btn-primary" value="Salvar" />
         </fieldset>

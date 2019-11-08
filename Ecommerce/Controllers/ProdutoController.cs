@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Domain;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Repository;
@@ -15,10 +18,12 @@ namespace Ecommerce.Controllers
         //readonly só recebe no construtor ou na declaração; não pode dar new()
         private readonly ProdutoDAO _produtoDAO;
         private readonly CategoriaDAO _categoriaDAO;
-        public ProdutoController(ProdutoDAO produtoDAO,CategoriaDAO categoriaDAO)
+        private readonly IHostingEnvironment _hosting;
+        public ProdutoController(ProdutoDAO produtoDAO,CategoriaDAO categoriaDAO, IHostingEnvironment hosting)
         {
             _produtoDAO = produtoDAO;
             _categoriaDAO = categoriaDAO;
+            _hosting = hosting;
         }
         //actions -> no controller os métodos se chamam actions
         //1 ° action faz a abertura da view
@@ -38,11 +43,28 @@ namespace Ecommerce.Controllers
         }
         //só é acessado via post
         [HttpPost]
-        public IActionResult Cadastrar(Produto p,int drpCategorias)
+        public IActionResult Cadastrar(Produto p,int drpCategorias,IFormFile fupImagem)
         {
             ViewBag.Categorias = new SelectList(_categoriaDAO.ListarTodos(), "CategoriaId","Nome");
             if (ModelState.IsValid)
             {
+                //verifica se a imagem existe
+                if (fupImagem != null)
+                {
+                    //pega o caminho da imagem; GUID é um identificador universal que não se repete
+                    string arquivo = Guid.NewGuid().ToString() + Path.GetExtension(fupImagem.FileName);
+                    //combina o camimho da imagem com a pasta da imagem
+                    string caminho = Path.Combine(_hosting.WebRootPath, "ecommerceImagens",arquivo);
+                    fupImagem.CopyTo(new FileStream(caminho, FileMode.Create));
+                    //pega a imagem e coloca no produto Imagem
+                    p.Imagem = arquivo;
+                }
+                else
+                {
+                    p.Imagem = "semImagem.png";
+                }
+                //seleciona o ID da categoria
+                p.Categoria = _categoriaDAO.BuscarPorId(drpCategorias);
                 //o objeto p chega preenchido do @model
                 if (_produtoDAO.Cadastrar(p))
                 {
@@ -83,8 +105,22 @@ namespace Ecommerce.Controllers
             return RedirectToAction("Index");
         }
         [HttpPost]
-        public IActionResult Alterar(Produto p)
+        public IActionResult Alterar(Produto p, IFormFile fupImagem)
         {
+            if (fupImagem != null)
+            {
+                //pega o caminho da imagem; GUID é um identificador universal que não se repete
+                string arquivo = Guid.NewGuid().ToString() + Path.GetExtension(fupImagem.FileName);
+                //combina o camimho da imagem com a pasta da imagem
+                string caminho = Path.Combine(_hosting.WebRootPath, "ecommerceImagens", arquivo);
+                fupImagem.CopyTo(new FileStream(caminho, FileMode.Create));
+                //pega a imagem e coloca no produto Imagem
+                p.Imagem = arquivo;
+            }
+            else
+            {
+                p.Imagem = "semImagem.png";
+            }
             _produtoDAO.Alterar(p);
             return RedirectToAction("Index");
         }
