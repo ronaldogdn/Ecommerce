@@ -85,14 +85,22 @@ namespace Ecommerce.Controllers
         {
             if (id != null)
             {
+                Produto p = _produtoDAO.BuscarPorId(id);
+                string caminho = Path.Combine(_hosting.WebRootPath, "ecommerceImagens", p.Imagem);
                 //remover o produto
                 if (_produtoDAO.Remover(id))
                 {
+                    //verifica se a imagem existe
+                    if (System.IO.File.Exists(caminho))
+                    {
+                        //apaga a imagem
+                        System.IO.File.Delete(caminho);
+                    }
                     return RedirectToAction("Index");
                 }                
             }
             //redirecionar para uma pág de erro
-            return RedirectToAction("Cadastrar");
+            return RedirectToAction("Index");
         }
 
         public IActionResult Alterar(int? id)
