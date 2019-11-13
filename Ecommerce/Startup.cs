@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Ecommerce.Util;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -43,6 +44,8 @@ namespace Ecommerce
             services.AddScoped<ProdutoDAO>();
             services.AddScoped<CategoriaDAO>();
             services.AddScoped<UsuarioDAO>();
+            services.AddScoped<ItemVendaDAO>();
+            services.AddScoped<UtilsSession>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

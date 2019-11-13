@@ -17,5 +17,6 @@ namespace Repository
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Endereco> Enderecos { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<ItemVenda> ItensVendas { get; set; }
     }
 }
