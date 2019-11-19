@@ -12573,27 +12573,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Aluno\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\ronal\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Ronaldo\\Ecommerce\\Ecommerce\\Ecommerce.csproj",
+      "projectUniqueName": "C:\\Users\\ronal\\Source\\Repos\\Ecommerce\\Ecommerce\\Ecommerce.csproj",
       "projectName": "Ecommerce",
-      "projectPath": "C:\\Ronaldo\\Ecommerce\\Ecommerce\\Ecommerce.csproj",
-      "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-      "outputPath": "C:\\Ronaldo\\Ecommerce\\Ecommerce\\obj\\",
+      "projectPath": "C:\\Users\\ronal\\Source\\Repos\\Ecommerce\\Ecommerce\\Ecommerce.csproj",
+      "packagesPath": "C:\\Users\\ronal\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ronal\\Source\\Repos\\Ecommerce\\Ecommerce\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\ronal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
@@ -12605,11 +12602,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Ronaldo\\Ecommerce\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Ronaldo\\Ecommerce\\Domain\\Domain.csproj"
+            "C:\\Users\\ronal\\Source\\Repos\\Ecommerce\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\ronal\\Source\\Repos\\Ecommerce\\Domain\\Domain.csproj"
             },
-            "C:\\Ronaldo\\Ecommerce\\Repository\\Repository.csproj": {
-              "projectPath": "C:\\Ronaldo\\Ecommerce\\Repository\\Repository.csproj"
+            "C:\\Users\\ronal\\Source\\Repos\\Ecommerce\\Repository\\Repository.csproj": {
+              "projectPath": "C:\\Users\\ronal\\Source\\Repos\\Ecommerce\\Repository\\Repository.csproj"
             }
           }
         }
@@ -12635,6 +12632,7 @@
             "version": "[2.1.2, )"
           },
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
@@ -12645,10 +12643,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

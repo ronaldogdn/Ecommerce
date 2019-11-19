@@ -24,7 +24,13 @@
             <a asp-action="Detalhes" asp-controller="Home" asp-route-id="@item.ProdutoId">
                 @item.Nome
             </a><br />
-            <b>Preço: </b> @item.Preco.Value.ToString("C2")
+            <b>Preço: </b> @item.Preco.Value.ToString("C2")<br />
+            <a asp-action="AdicionarAoCarrinho"
+               asp-controller="Home"
+               asp-route-id="@item.ProdutoId"
+               class="btn btn-success">
+                Adicionar
+            </a>
         </div>
     }
 </div>

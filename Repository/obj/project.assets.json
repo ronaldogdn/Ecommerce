@@ -3909,32 +3909,31 @@
     ".NETCoreApp,Version=v2.1": [
       "Domain >= 1.0.0",
       "Microsoft.CodeAnalysis.FxCopAnalyzers >= 2.9.7",
+      "Microsoft.CodeQuality.Analyzers >= 2.9.7",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.1.11",
-      "Microsoft.NETCore.App >= 2.1.0"
+      "Microsoft.NETCore.App >= 2.1.0",
+      "Microsoft.NetCore.Analyzers >= 2.9.7"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Aluno\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\ronal\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Ronaldo\\Ecommerce\\Repository\\Repository.csproj",
+      "projectUniqueName": "C:\\Users\\ronal\\Source\\Repos\\Ecommerce\\Repository\\Repository.csproj",
       "projectName": "Repository",
-      "projectPath": "C:\\Ronaldo\\Ecommerce\\Repository\\Repository.csproj",
-      "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-      "outputPath": "C:\\Ronaldo\\Ecommerce\\Repository\\obj\\",
+      "projectPath": "C:\\Users\\ronal\\Source\\Repos\\Ecommerce\\Repository\\Repository.csproj",
+      "packagesPath": "C:\\Users\\ronal\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ronal\\Source\\Repos\\Ecommerce\\Repository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\ronal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
@@ -3946,8 +3945,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Ronaldo\\Ecommerce\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Ronaldo\\Ecommerce\\Domain\\Domain.csproj"
+            "C:\\Users\\ronal\\Source\\Repos\\Ecommerce\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\ronal\\Source\\Repos\\Ecommerce\\Domain\\Domain.csproj"
             }
           }
         }
@@ -3967,6 +3966,12 @@
             "target": "Package",
             "version": "[2.9.7, )"
           },
+          "Microsoft.CodeQuality.Analyzers": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[2.9.7, )"
+          },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[2.1.11, )"
@@ -3976,13 +3981,25 @@
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
+          },
+          "Microsoft.NetCore.Analyzers": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[2.9.7, )"
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

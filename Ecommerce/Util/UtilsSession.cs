@@ -15,10 +15,11 @@ namespace Ecommerce.Util
         {
             _http = http;
         }
-        public string RetornarCarrinhoId()
+        public string RetonarCarrinhoId()
         {
             if(_http.HttpContext.Session.GetString(CARRINHO_ID) == null)
             {
+                //Guid.NewGuid() é o ID gerado unicamente por usuário
                 _http.HttpContext.Session.SetString(CARRINHO_ID, Guid.NewGuid().ToString());
             }
             return _http.HttpContext.Session.GetString(CARRINHO_ID);

@@ -59,10 +59,9 @@ namespace Repository
         }
         public List<Produto> ListarPorCategoria(int? id)
         {
-            return _context.
-                Produtos.Include(x => x.Categoria).
-                Where(x => x.Categoria.CategoriaId == id).
-                ToList();
+            //inclui a Categoria que está dentro de Produtos
+            return _context.Produtos.Include(x => x.Categoria).
+                Where(x => x.Categoria.CategoriaId == id).ToList();
         }
     }
 }

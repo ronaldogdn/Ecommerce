@@ -46,6 +46,7 @@ namespace Ecommerce
             services.AddScoped<UsuarioDAO>();
             services.AddScoped<ItemVendaDAO>();
             services.AddScoped<UtilsSession>();
+            services.AddHttpContextAccessor();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -69,7 +70,7 @@ namespace Ecommerce
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Produto}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

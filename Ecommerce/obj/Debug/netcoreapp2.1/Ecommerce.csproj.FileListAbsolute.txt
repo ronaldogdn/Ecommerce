@@ -78,3 +78,6 @@ C:\Ronaldo\Ecommerce\Ecommerce\obj\Debug\netcoreapp2.1\Razor\Views\Usuario\Cadas
 C:\Users\ronal\Source\Repos\Ecommerce\Ecommerce\obj\Debug\netcoreapp2.1\Razor\Views\Usuario\Cadastrar.cshtml.g.cs
 C:\Ronaldo\Ecommerce\Ecommerce\obj\Debug\netcoreapp2.1\Razor\Views\Usuario\Index.g.cshtml.cs
 C:\Users\ronal\Source\Repos\Ecommerce\Ecommerce\obj\Debug\netcoreapp2.1\Razor\Views\Usuario\Index.cshtml.g.cs
+C:\Users\ronal\Source\Repos\Ecommerce\Ecommerce\obj\Debug\netcoreapp2.1\Razor\Views\Home\CarrinhoCompras.cshtml.g.cs
+C:\Users\ronal\Source\Repos\Ecommerce\Ecommerce\obj\Debug\netcoreapp2.1\Razor\Views\Home\Detalhes.cshtml.g.cs
+C:\Users\ronal\Source\Repos\Ecommerce\Ecommerce\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
