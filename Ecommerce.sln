@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.29001.49
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ecommerce", "Ecommerce\Ecommerce.csproj", "{25A7EBAA-4A04-431F-8380-54A4C66A42A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{0CD3AE2F-5105-4775-858A-CFF255355B0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{0CD3AE2F-5105-4775-858A-CFF255355B0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{71DDAF4F-8E3F-4A2C-9169-264B67CF03C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{71DDAF4F-8E3F-4A2C-9169-264B67CF03C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{22D827F9-BF05-4844-92C9-9B67F180377F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{71DDAF4F-8E3F-4A2C-9169-264B67CF03C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71DDAF4F-8E3F-4A2C-9169-264B67CF03C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71DDAF4F-8E3F-4A2C-9169-264B67CF03C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22D827F9-BF05-4844-92C9-9B67F180377F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22D827F9-BF05-4844-92C9-9B67F180377F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22D827F9-BF05-4844-92C9-9B67F180377F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22D827F9-BF05-4844-92C9-9B67F180377F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

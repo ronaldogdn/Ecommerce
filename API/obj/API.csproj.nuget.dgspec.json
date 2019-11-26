@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Ronaldo\\Ecommerce\\Domain\\Domain.csproj": {}
+    "C:\\Ronaldo\\Ecommerce\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Ronaldo\\Ecommerce\\Domain\\Domain.csproj": {
+    "C:\\Ronaldo\\Ecommerce\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Ronaldo\\Ecommerce\\Domain\\Domain.csproj",
-        "projectName": "Domain",
-        "projectPath": "C:\\Ronaldo\\Ecommerce\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Ronaldo\\Ecommerce\\API\\API.csproj",
+        "projectName": "API",
+        "projectPath": "C:\\Ronaldo\\Ecommerce\\API\\API.csproj",
         "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-        "outputPath": "C:\\Ronaldo\\Ecommerce\\Domain\\obj\\",
+        "outputPath": "C:\\Ronaldo\\Ecommerce\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -43,8 +43,18 @@
       "frameworks": {
         "netcoreapp2.1": {
           "dependencies": {
-            "Microsoft.NETCore.App": {
+            "Microsoft.AspNetCore.App": {
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
+            "Microsoft.NETCore.App": {
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true
